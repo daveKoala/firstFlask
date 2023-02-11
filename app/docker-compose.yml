@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app:
+    build: app
+    restart: always
+    volumes:
+      - ./src:/code
+    ports:
+      - 5001:5000
+    # secrets:
+    #   - db-password
+    # networks:
+    #   - backend-network
+    #   - frontend-network
